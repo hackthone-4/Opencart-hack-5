@@ -1,5 +1,7 @@
 package hackthone.hackthone5;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,12 +87,99 @@ public class Login {
 	By monitors=By.xpath("//*[@id='menu']/div[2]/ul/li[3]/div/div/ul/li[2]/a");
 	By apple=By.xpath("//*[@id='content']/div[3]/div[1]/div/div[2]/div[1]/h4/a");
 	By checkbox4=By.xpath("//*[@id='input-option223']/div[1]/label/input");
-	By select=By.xpath("//*[@id='input-option217']");
+	By select=By.xpath("//select[@id='input-option217']");
 	By text=By.xpath("//*[@id='input-option208']");
 	By area=By.xpath("//*[@id='input-option209']");
 	By fileupload=By.xpath("//*[@id='button-upload222']");
 	By addtocart8=By.xpath("//*[@id='button-cart']");
 	
+	//product avialbility
+	By search=By.xpath("//*[@id='search']/input");
+	By iphone=By.xpath("//*[@id='content']/div[3]/div/div/div[2]/div[1]/h4/a");
+	By qty=By.xpath("//*[@id='input-quantity']");
+	By addtocart9=By.xpath("//*[@id='button-cart']");
+	By shoopingcart=By.xpath("//*[@id='top-links']/ul/li[4]/a");
+	By remove=By.xpath("//*[@id='content']/form/div/table/tbody/tr[2]/td[4]/div/span/button[2]");
+	By cont9=By.xpath("//*[@id='content']/div/div/a");
+	
+	//Apply coupn
+	By coupn=By.xpath("//*[@id='accordion']/div[1]/div[1]/h4/a");
+	By code=By.xpath("//*[@id='input-coupon']");
+	By applycoupn=By.xpath("//*[@id='button-coupon']");
+	
+	//sorting
+	By sort=By.xpath("//*[@id='input-sort']");
+	By hightolow=By.xpath("//*[@id='input-sort']/option[5]");
+	By whishlist=By.xpath("//*[@id='content']/div[3]/div[2]/div/div[2]/div[2]/button[2]");
+	By whishlisticon=By.xpath("//*[@id='wishlist-total']");
+	By addtocartbtn=By.xpath("//*[@id='content']/div[1]/table/tbody/tr/td[6]/button");
+	
+	//order history
+	By history=By.xpath("//*[@id='column-right']/div/a[6]");
+	By returnbtn=By.xpath("//*[@id='content']/div[1]/table/tbody/tr/td[6]/a[2]");
+	By viewbutton=By.xpath("//*[@id='content']/div[1]/table/tbody/tr[1]/td[7]/a");
+	By submit=By.xpath("//*[@id='content']/form/div/div[2]/input");
+	
+	public WebElement getsubmit() {
+		return driver.findElement(submit);
+	}
+	public WebElement getreturnbtn() {
+		return driver.findElement(returnbtn);
+	}
+	public WebElement getviewbutton() {
+		return driver.findElement(viewbutton);
+	}
+	public WebElement gethistory() {
+		return driver.findElement(history);
+	}
+	public WebElement getaddtocartbtn() {
+		return driver.findElement(addtocartbtn);
+	}
+	public WebElement getwhishlisticon() {
+		return driver.findElement(whishlisticon);
+	}
+	public WebElement getwhishlist() {
+		return driver.findElement(whishlist);
+	}
+	public WebElement gethightolow() {
+		return driver.findElement(hightolow);
+	}
+	public WebElement getsort() {
+		return driver.findElement(sort);
+	}
+	public WebElement getapplycopun() {
+		return driver.findElement(applycoupn);
+	}
+	public WebElement getentercode() {
+		return driver.findElement(code);
+	}
+	public WebElement getcopun() {
+		return driver.findElement(coupn);
+	}
+	
+	public WebElement getremoveitem() {
+		return driver.findElement(remove);
+	}
+	
+	public WebElement getcont9() {
+		return driver.findElement(cont9);
+	}
+	public WebElement getshoopingcart() {
+		return driver.findElement(shoopingcart);
+	}
+	
+	public WebElement getaddtocart9() {
+		return driver.findElement(addtocart9);
+	}
+	public WebElement getqty() {
+		return driver.findElement(qty);
+	}
+	public WebElement getsearchiphone() {
+		return driver.findElement(search);
+	}
+	public WebElement getiphone() {
+		return driver.findElement(iphone);
+	}
 	public WebElement getaccount() {
 		return driver.findElement(Account);
 	}
